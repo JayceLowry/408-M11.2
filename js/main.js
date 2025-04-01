@@ -7,6 +7,13 @@ function loaded() {
     // Assign to a variable so we can set a breakpoint in the debugger!
     const hello = sayHello();
     console.log(hello);
+    
+    let xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", function () {
+        updateTable(JSON.parse(xhr.response));
+    });
+    xhr.open("GET", "https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items");
+    xhr.send();
 }
 
 /**
@@ -38,7 +45,7 @@ document.getElementById("add-item").addEventListener("submit", function(event) {
 /* Handler for retrieving data from the server */
 document.getElementById("load-items").addEventListener("submit", function(event) {
     event.preventDefault();
-    
+
     let xhr = new XMLHttpRequest();
     xhr.addEventListener("load", function () {
         updateTable(JSON.parse(xhr.response));
