@@ -11,13 +11,11 @@
 </head>
 
 <body>
-    <h1>Simple Demo for PUT, GET, and DELETE</h1>
-    <p id="lambda-info">
-        <!-- loaded with AJAX -->
-    </p>
+    <h1>Simple Inventory App</h1>
 
     <hr>
 
+    <p>Adds an item</p>
     <form id="add-item">
         <label for="id">ID:</label>
         <input type="text" name="id" id="id" required>
@@ -31,46 +29,11 @@
         <input type="submit" value="Add Item">
     </form>
 
-    <!-- <button id="send-data">Send Data</button> -->
-    <!-- <input type="text" id="ID" required>
-    <input type="text" id="Name" required>
-    <input type="text" id="Price" required> -->
-
-    <p>Sends an example JSON object to the server with id 11111</p>
-    <!-- <script>
-        document.getElementById("send-data").onclick = function () {
-            const id = Document.getElementById("ID").value;
-            const name = Document.getElementById("Name").value;
-            const price = Document.getElementById("Price").value;
-            
-            let xhr = new XMLHttpRequest();
-            xhr.open("PUT", "https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items");
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.send(JSON.stringify({
-                "id": `${id}`,
-                "price": `${price}`,
-                "name": `${name}`
-            }));
-        }
-    </script> -->
-
-    <!-- <button id="load-data">Load Data</button> -->
     <p>Loads data from the server</p>
     <form id="load-items">
         <input type="submit" value="Load All Items">
     </form>
-    <!-- <script>
-        document.getElementById("load-data").onclick = function () {
-            let lambda = document.getElementById("lambda-info");
-            let xhr = new XMLHttpRequest();
-            xhr.addEventListener("load", function () {
-                lambda.innerHTML = xhr.response;
-            });
-            xhr.open("GET", "https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items");
-            xhr.send();
-        }
-
-    </script> -->
+    
     <table id="inventory">
         <thead>
             <tr>
@@ -81,21 +44,11 @@
             </tr>
         </thead>
         <tbody>
-
+            <!-- Loaded with AJAX -->
         </tbody>
     </table>
 
     <hr>
-    <button id="delete-data">Delete Data</button>
-    <p>Deletes a JSON object from the server with 11111</p>
-    <script>
-        document.getElementById("delete-data").onclick = function () {
-            let xhr = new XMLHttpRequest();
-            xhr.open("DELETE", "https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items/6666666");
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.send();
-        }
-    </script>
     <script src="js/main.js"></script>
 </body>
 

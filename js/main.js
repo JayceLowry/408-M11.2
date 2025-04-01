@@ -38,7 +38,7 @@ document.getElementById("add-item").addEventListener("submit", function(event) {
 /* Handler for retrieving data from the server */
 document.getElementById("load-items").addEventListener("submit", function(event) {
     event.preventDefault();
-    // let lambda = document.getElementById("lambda-info");
+    
     let xhr = new XMLHttpRequest();
     xhr.addEventListener("load", function () {
         updateTable(JSON.parse(xhr.response));
@@ -85,11 +85,3 @@ function updateTable(data) {
         col4.appendChild(del);
     });
 }
-
-// document.getElementById("delete-data").onclick = function () {
-//     const id = this.closest("tr").cells[0].textContent;
-//     let xhr = new XMLHttpRequest();
-//     xhr.open("DELETE", `https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items/${id}`);
-//     xhr.setRequestHeader("Content-Type", "application/json");
-//     xhr.send();
-// }
