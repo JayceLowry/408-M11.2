@@ -17,24 +17,49 @@
     </p>
 
     <hr>
-    <button id="send-data">Send Data</button>
+
+    <form id="add-item">
+        <label for="id">ID:</label>
+        <input type="text" name="id" id="id" required>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price" required>
+
+        <input type="submit" value="Add Item">
+    </form>
+
+    <!-- <button id="send-data">Send Data</button> -->
+    <!-- <input type="text" id="ID" required>
+    <input type="text" id="Name" required>
+    <input type="text" id="Price" required> -->
+
     <p>Sends an example JSON object to the server with id 11111</p>
-    <script>
+    <!-- <script>
         document.getElementById("send-data").onclick = function () {
+            const id = Document.getElementById("ID").value;
+            const name = Document.getElementById("Name").value;
+            const price = Document.getElementById("Price").value;
+            
             let xhr = new XMLHttpRequest();
             xhr.open("PUT", "https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items");
             xhr.setRequestHeader("Content-Type", "application/json");
             xhr.send(JSON.stringify({
-                "id": "6666666",
-                "price": 19,
-                "name": "test put value"
+                "id": `${id}`,
+                "price": `${price}`,
+                "name": `${name}`
             }));
         }
-    </script>
+    </script> -->
 
-    <button id="load-data">Load Data</button>
+    <!-- <button id="load-data">Load Data</button> -->
     <p>Loads data from the server</p>
-    <script>
+    <form id="load-items">
+        <input type="submit" value="Load All Items">
+    </form>
+    <!-- <script>
         document.getElementById("load-data").onclick = function () {
             let lambda = document.getElementById("lambda-info");
             let xhr = new XMLHttpRequest();
@@ -45,7 +70,20 @@
             xhr.send();
         }
 
-    </script>
+    </script> -->
+    <table id="inventory">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 
     <hr>
     <button id="delete-data">Delete Data</button>
@@ -58,6 +96,7 @@
             xhr.send();
         }
     </script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
