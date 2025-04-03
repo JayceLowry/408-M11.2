@@ -7,48 +7,58 @@
     <title>Test AWS Lambda</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Simple Inventory App</h1>
+    <main class="app">
+        <h1>Simple Inventory App</h1>
 
-    <hr>
+        <form id="load-items">
+            <input type="submit" value="Load All Items">
+        </form>
 
-    <p>Adds an item</p>
-    <form id="add-item">
-        <label for="id">ID:</label>
-        <input type="text" name="id" id="id" required>
+        <hr>
+        
+        <table id="inventory">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Loaded with AJAX -->
+            </tbody>
+        </table>
 
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required>
+        <hr>
 
-        <label for="price">Price:</label>
-        <input type="text" name="price" id="price" required>
+        <section class="add">
+            <h2>Add New Item to Database</h2>
+            <form id="add-item">
+                <div class="form-item">
+                    <label for="id">ID:</label>
+                    <input type="text" name="id" id="id" required>
+                </div>
 
-        <input type="submit" value="Add Item">
-    </form>
+                <div class="form-item">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
 
-    <p>Loads data from the server</p>
-    <form id="load-items">
-        <input type="submit" value="Load All Items">
-    </form>
-    
-    <table id="inventory">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Loaded with AJAX -->
-        </tbody>
-    </table>
+                <div class="form-item">
+                    <label for="price">Price:</label>
+                    <input type="text" name="price" id="price" required>
+                </div>
 
-    <hr>
+                <input type="submit" value="Add Item">
+            </form>
+        </section>
+
+    </main>
     <script src="js/main.js"></script>
 </body>
 

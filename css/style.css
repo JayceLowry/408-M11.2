@@ -1,4 +1,73 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+.app {
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 980px;
+  border-radius: 10px;
+  height: 100vh;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#add-item {
+  display: flex;
+  flex-direction: column;
+  width: 50%
+}
+
+.form-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items:flex-start;
+}
+
+.form-item label {
+  flex: 1;
+}
+
+.form-item input {
+  flex: 3;
+}
+
+.add * {
+  flex: 1;
+}
+
+table, th, td {
+  border: 1px solid lightgray;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: rgb(47, 45, 45);
+}
+
+th {
+  background-color: lightgray;
+}
+
+button, input {
+  border: 1px solid lightgray;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: rgb(197, 195, 195);
+  border: 1px solid black;
+  cursor: pointer;
 }
