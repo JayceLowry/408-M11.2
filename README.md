@@ -2,23 +2,16 @@
 
 ## Overview
 
-TODO: Write a project description
+This is a simple inventory app that uses a web API and an AWS backend to manage a database.
+
+## Running
+To run the project locally, install the Live Server extension for VScode. In the
+command palette, select `Live Preview: Start Server`. Then, connect to
+http://127.0.0.1:3000/ to view the running application.
 
 ## Sources and Credits
 
-TODO: You must credit the sources and authors of any code, libraries, or other
-assets you use in your project. If you leave this section blank, your project
-will be considered in violation of the Academic Honesty policy unless you truly
-created everything from scratch with no outside help. If you need to use a
-source that you cannot credit (e.g. a classmate's work), you must get explicit
-permission from your instructor.
-
-A simple bulleted list below is sufficient. For example:
-
-- Bootstrap: https://getbootstrap.com/
-- jQuery: https://jquery.com/
-- Background image: https://unsplash.com/photos/...
-- Sound effects: https://freesound.org/people/...
-- Icons: https://fontawesome.com/
-- Fonts: https://fonts.google.com/
-- etc.
+- https://stackoverflow.com/questions/63901086/create-table-rows-with-javascript
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow
+- https://stackoverflow.com/questions/62531811/get-closest-parent-element-excluding-current-element-using-a-selector
+- https://stackoverflow.com/questions/19454310/stop-form-refreshing-page-on-submit
