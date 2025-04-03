@@ -28,9 +28,13 @@ function sayHello() {
 document.getElementById("add-item").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const id = parseInt(document.getElementById("id").value);
     const name = document.getElementById("name").value;
+    const id = parseInt(document.getElementById("id").value);
     const price = parseInt(document.getElementById("price").value);
+
+    if (isNaN(id) || isNaN(price)) {
+        return;
+    }
 
     let xhr = new XMLHttpRequest();
     xhr.open("PUT", "https://w450sz6yzd.execute-api.us-east-2.amazonaws.com/items");
